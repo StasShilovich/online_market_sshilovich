@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <div th:replace="fragments/header :: header-css"></div>
+</head>
+<body>
+<div class="starter-template">
+    <h1>Spring Boot Web Thymeleaf + Spring Security</h1>
+    <h2>1. Visit <a th:href="@{/private/users}">Admin page (Spring Security protected, Need Admin Role)</a></h2>
+    <h2>2. Visit <a th:href="@{/private/items}">User page (Spring Security protected, Need User Role)</a></h2>
+</div>
+</body>
+</html>

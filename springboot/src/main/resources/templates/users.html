@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"></div>
+    <title>Users</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="tab-container">
+    <table class="table-bordered">
+        <thead>
+        <tr>
+            <th scope="col"><i> Surname </i></th>
+            <th scope="col"><i> Name </i></th>
+            <th scope="col"><i> Patronymic </i></th>
+            <th scope="col"><i> Email </i></th>
+            <th scope="col"><i> Role </i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user:${users}">
+            <td th:text="${user.surname}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.patronymic}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.role}"></td>
+            <td>
+                <form action="#" th:action="@{/private/users/update/{id}(id=${user.id})}"
+                      method="post">
+                    <label>
+                        <select class="form-control-lg" name="role" size="1">
+                            <option th:value="ADMINISTRATOR">Admin</option>
+                            <option th:value="SALE_USER">Sale_user</option>
+                            <option th:value="CUSTOMER_USER">Customer_user</option>
+                            <option th:value="SECURE_API_USER">Secure_api_user</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="btn btn-info">Change_role</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
