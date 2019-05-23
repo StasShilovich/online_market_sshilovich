@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class UserRepositoryImpl extends GenericRepositoryImpl implements UserRepository {
+public class UserRepositoryImpl extends GenericRepositoryImpl<Long, User> implements UserRepository {
     private static final Logger logger = LogManager.getLogger(UserRepositoryImpl.class);
     private static final String ERROR_MESSAGE = "Data module operation failed";
 

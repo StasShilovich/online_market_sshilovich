@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="ITEM_TABLE_1" author="stas.shilovich@gmail.com">
+        <createTable tableName="T_ITEM">
+            <column autoIncrement="true" name="F_ID" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="F_NAME" type="VARCHAR(30)"/>
+            <column name="F_UNIQUE" type="VARCHAR(40)"/>
+            <column name="F_PRICE" type="VARCHAR(40)"/>
+            <column name="F_ITEM_INFO" type="BIGINT"/>
+            <column name="F_DELETED" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet id="ITEM_INFO_TABLE_1" author="stas.shilovich@gmail.com">
+        <createTable tableName="T_ITEM_INFO">
+            <column autoIncrement="true" name="F_ID" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="F_DESCRIPTION" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="FK_ITEM_INFO" references="T_ITEM(F_ID)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

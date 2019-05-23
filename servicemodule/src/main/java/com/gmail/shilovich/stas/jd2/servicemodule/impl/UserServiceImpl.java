@@ -1,5 +1,6 @@
 package com.gmail.shilovich.stas.jd2.servicemodule.impl;
 
+import com.gmail.shilovich.stas.jd2.repositorymodule.ItemRepository;
 import com.gmail.shilovich.stas.jd2.repositorymodule.UserRepository;
 import com.gmail.shilovich.stas.jd2.repositorymodule.model.User;
 import com.gmail.shilovich.stas.jd2.servicemodule.UserService;
@@ -27,15 +28,18 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     private final UserRepository userRepository;
     private final UserConverter userConverter;
+    private final ItemRepository itemRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, UserConverter userConverter) {
+    public UserServiceImpl(UserRepository userRepository, UserConverter userConverter, ItemRepository itemRepository) {
         this.userRepository = userRepository;
         this.userConverter = userConverter;
+        this.itemRepository = itemRepository;
     }
 
     @Override
     public List<UserDTO> getUsers() {
+        logger.info(itemRepository.getCountOfEntities());
         List<User> users;
         try (Connection connection = userRepository.getConnection()) {
             return getUsers(connection);
