@@ -65,11 +65,11 @@ public class GenericRepositoryImpl<I, T> implements GenericRepository<I, T> {
     }
 
     @Override
-    public List<T> findAll(int offset, int limit) {
+    public List<T> findAll() {
         String query = "from " + entityClass.getName() + " c";
-        Query q = entityManager.createQuery(query)
-                .setFirstResult(offset)
-                .setMaxResults(limit);
+        Query q = entityManager.createQuery(query);
+//                .setFirstResult(offset)
+//                .setMaxResults(limit);
         return q.getResultList();
     }
 

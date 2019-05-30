@@ -12,14 +12,7 @@ public class LiquibaseConfig {
     @Bean
     public SpringLiquibase liquibase(DataSource dataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();
-        liquibase.setChangeLog("classpath:migrations/db_user_1.xml");
-        liquibase.setChangeLog("classpath:migrations/db_role_1.xml");
-        liquibase.setChangeLog("classpath:migrations/db_feedback_1.xml");
-        liquibase.setChangeLog("classpath:migrations/db_user_insert_1.xml");
-        liquibase.setChangeLog("classpath:migrations/db_user_insert_2.xml");
-        liquibase.setChangeLog("classpath:migrations/db_user_insert_3.xml");
-        liquibase.setChangeLog("classpath:migrations/db_role_insert_1.xml");
-        liquibase.setChangeLog("classpath:migrations/db_item_1.xml");
+        liquibase.setChangeLog("classpath:migrations/changelog-master.xml");
         liquibase.setDataSource(dataSource);
         return liquibase;
     }

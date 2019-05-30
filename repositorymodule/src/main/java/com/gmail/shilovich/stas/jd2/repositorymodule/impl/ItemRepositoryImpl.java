@@ -6,6 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class ItemRepositoryImpl extends GenericRepositoryImpl<Long, Item> implements ItemRepository {
 
@@ -13,8 +15,12 @@ public class ItemRepositoryImpl extends GenericRepositoryImpl<Long, Item> implem
 
     @Override
     public int getCountOfEntities() {
-        int countOfEntities = super.getCountOfEntities();
-        logger.info("Cout of entities= " + countOfEntities);
-        return countOfEntities;
+        return super.getCountOfEntities();
     }
+
+    @Override
+    public List<Item> findAll() {
+        return super.findAll();
+    }
+
 }

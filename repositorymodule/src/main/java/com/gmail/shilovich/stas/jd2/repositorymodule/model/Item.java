@@ -1,24 +1,94 @@
 package com.gmail.shilovich.stas.jd2.repositorymodule.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Objects;
 
 @Entity
-@Table
+@Table(name = "t_item")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(updatable = false, nullable = false)
+    @Column(name = "F_ID", updatable = false, nullable = false)
     private Long id;
-
-    @Column
+    @Column(name = "F_NAME")
     private String name;
-    @Column
+    @Column(name = "F_UNIQUE")
     private String unique;
-    @Column
+    @Column(name = "F_PRICE")
     private String price;
-    @Column
-    private Long itemInfo;
-    @Column
-    private boolean deleted;
+    @Column(name = "F_DESCRIPTION")
+    private String description;
+
+    public Item(String name, String unique, String price, String description) {
+        this.name = name;
+        this.unique = unique;
+        this.price = price;
+        this.description = description;
+    }
+
+    public Item() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUnique() {
+        return unique;
+    }
+
+    public void setUnique(String unique) {
+        this.unique = unique;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return Objects.equals(id, item.id) &&
+                Objects.equals(name, item.name) &&
+                Objects.equals(unique, item.unique) &&
+                Objects.equals(price, item.price) &&
+                Objects.equals(description, item.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, unique, price, description);
+    }
 }
