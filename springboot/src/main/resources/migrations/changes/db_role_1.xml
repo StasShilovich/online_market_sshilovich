@@ -7,7 +7,7 @@
     <changeSet id="ROLE_TABLE_1" author="stas.shilovich@gmail.com">
         <createTable tableName="T_ROLE">
             <column autoIncrement="true" name="F_ID" type="BIGINT">
-                <constraints nullable="false" foreignKeyName="FK_USER_ROLE" references="T_USER(F_ID)"
+                <constraints nullable="false" foreignKeyName="FK_ROLE_USER" references="T_USER(F_ID)"
                              primaryKey="true"/>
             </column>
             <column name="F_NAME" type="VARCHAR(20)"/>

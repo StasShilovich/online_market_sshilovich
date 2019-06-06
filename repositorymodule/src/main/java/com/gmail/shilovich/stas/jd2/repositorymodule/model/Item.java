@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
@@ -21,19 +22,10 @@ public class Item {
     @Column(name = "F_UNIQUE")
     private String unique;
     @Column(name = "F_PRICE")
-    private String price;
+    private BigDecimal price;
     @Column(name = "F_DESCRIPTION")
     private String description;
 
-    public Item(String name, String unique, String price, String description) {
-        this.name = name;
-        this.unique = unique;
-        this.price = price;
-        this.description = description;
-    }
-
-    public Item() {
-    }
 
     public Long getId() {
         return id;
@@ -59,11 +51,11 @@ public class Item {
         this.unique = unique;
     }
 
-    public String getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

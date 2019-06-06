@@ -2,25 +2,27 @@ package com.gmail.shilovich.stas.jd2.repositorymodule.impl;
 
 import com.gmail.shilovich.stas.jd2.repositorymodule.ItemRepository;
 import com.gmail.shilovich.stas.jd2.repositorymodule.model.Item;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Query;
 import java.util.List;
 
 @Repository
 public class ItemRepositoryImpl extends GenericRepositoryImpl<Long, Item> implements ItemRepository {
 
-    private static final Logger logger = LogManager.getLogger(ItemRepositoryImpl.class);
-
     @Override
-    public int getCountOfEntities() {
-        return super.getCountOfEntities();
+    public List<Item> findItemByName(int offset, int limit) {
+        String hql = "FROM Item ORDER BY name";
+        Query q = entityManager.createQuery(hql)
+                .setFirstResult(offset)
+                .setMaxResults(limit);
+        return q.getResultList();
     }
 
     @Override
-    public List<Item> findAll() {
-        return super.findAll();
+    public List<Item> getItemAPI() {
+        String hql = "FROM Item ";
+        Query q = entityManager.createQuery(hql);
+        return q.getResultList();
     }
-
 }

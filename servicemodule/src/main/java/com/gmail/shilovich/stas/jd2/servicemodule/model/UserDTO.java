@@ -73,4 +73,18 @@ public class UserDTO {
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
     }
+
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", role='" + role + '\'' +
+                ", isDeleted=" + isDeleted +
+                '}';
+    }
 }

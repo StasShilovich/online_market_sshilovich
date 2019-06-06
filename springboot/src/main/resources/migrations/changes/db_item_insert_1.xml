@@ -1,0 +1,102 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="INSERT_ITEM_1" author="stas.shilovich@gmail.com">
+        <insert tableName="T_ITEM">
+            <column name="F_NAME" value="PALIT nVidia GeForce RTX 2060"/>
+            <column name="F_UNIQUE" value="d86e721f-2f50-4fe0-b1e8-e9a77bd979d1"/>
+            <column name="F_PRICE" value="26110"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1365 МГц (1830 МГц, в режиме Boost); частота памяти: 14000МГц; объём видеопамяти: 6Гб; тип видеопамяти: GDDR6; OverClock Edition; DirectX 12/OpenGL 4.5; доп. питание: 8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="PALIT nVidia GeForce GTX 1050TI"/>
+            <column name="F_UNIQUE" value="716f066a-fb4c-465c-90ac-8c3835b9f060"/>
+            <column name="F_PRICE" value="11520"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1366 МГц (1480 МГц, в режиме Boost); частота памяти: 7000МГц; объём видеопамяти: 4Гб; тип видеопамяти: GDDR5; OverClock Edition; DirectX 12/OpenGL 4.5; доп. питание: 6 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="MSI nVidia GeForce GTX 1660TI"/>
+            <column name="F_UNIQUE" value="f7aab47a-bc01-4529-99ee-d1537b7ea593"/>
+            <column name="F_PRICE" value="22690"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1536 МГц (1875 МГц, в режиме Boost); частота памяти: 12000МГц; объём видеопамяти: 6Гб; тип видеопамяти: GDDR6; DirectX 12/OpenGL 4.5; доп. питание: 8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="SAPPHIRE AMD Radeon RX 590"/>
+            <column name="F_UNIQUE" value="ce5e1046-3311-4938-a4fe-1b15e39ea586"/>
+            <column name="F_PRICE" value="18220"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1560 МГц; частота памяти: 8400МГц; объём видеопамяти: 8Гб; тип видеопамяти: GDDR5; OverClock Edition; поддержка: CrossFireX; DirectX 12/OpenGL 4.5; доп. питание: 6+8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="MSI nVidia GeForce GTX 1050TI"/>
+            <column name="F_UNIQUE" value="61fa65cb-119f-4b01-a210-8b5c523eaabf"/>
+            <column name="F_PRICE" value="11320"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1341 МГц (1455 МГц, в режиме Boost); частота памяти: 7008МГц; объём видеопамяти: 4Гб; тип видеопамяти: GDDR5; OverClock Edition; DirectX 12/OpenGL 4.5; доп. питание: без;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="GIGABYTE nVidia GeForce GTX 1660TI"/>
+            <column name="F_UNIQUE" value="6d39362e-ec58-4727-939a-02ac132a1cb6"/>
+            <column name="F_PRICE" value="20790"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1536 МГц; частота памяти: 12000МГц; объём видеопамяти: 6Гб; тип видеопамяти: GDDR6; OverClock Edition; DirectX 12/OpenGL 4.5; доп. питание: 8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="ASUS nVidia GeForce GT 710"/>
+            <column name="F_UNIQUE" value="74faac55-9b28-4b60-a5a0-da4f2cc43440"/>
+            <column name="F_PRICE" value="2490"/>
+            <column name="F_DESCRIPTION" value=" частота процессора: 954 МГц; частота памяти: 1800МГц; объём видеопамяти: 1Гб; тип видеопамяти: DDR3; DirectX 12/OpenGL 4.4; доп. питание: без дополнительного питания;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="SAPPHIRE AMD Radeon RX 580"/>
+            <column name="F_UNIQUE" value="f16142b5-617b-46fb-a390-f1ae6cdd10e1"/>
+            <column name="F_PRICE" value="16790"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1411 МГц; частота памяти: 8000МГц; объём видеопамяти: 8Гб; тип видеопамяти: GDDR5; OverClock Edition; поддержка: CrossFireX; DirectX 12/OpenGL 4.5; доп. питание: 6+8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="SAPPHIRE AMD Radeon HD 5450"/>
+            <column name="F_UNIQUE" value="2fea7438-48d1-4752-9994-797fadb846a4"/>
+            <column name="F_PRICE" value="2280"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 650 МГц; частота памяти: 1334МГц; объём видеопамяти: 1Гб; тип видеопамяти: DDR3; DirectX 11/OpenGL 3.2; доп. питание: без дополнительного питания;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="ASUS nVidia GeForce GT 710"/>
+            <column name="F_UNIQUE" value="0717ab93-2fc8-45b5-920f-fa91ad30e672"/>
+            <column name="F_PRICE" value="2680"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 954 МГц; частота памяти: 5012МГц; объём видеопамяти: 1Гб; тип видеопамяти: GDDR5; DirectX 12/OpenGL 4.5; доп. питание: без дополнительного питания;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="GIGABYTE nVidia GeForce RTX 2070"/>
+            <column name="F_UNIQUE" value="0116589f-257d-4e4e-b0c7-74cc06e43fab"/>
+            <column name="F_PRICE" value="37290"/>
+            <column name="F_DESCRIPTION" value=" частота процессора: 1620 МГц; частота памяти: 14000МГц; объём видеопамяти: 8Гб; тип видеопамяти: GDDR6; DirectX 12/OpenGL 4.5; доп. питание: 6+8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="GIGABYTE nVidia GeForce RTX 2080Ti"/>
+            <column name="F_UNIQUE" value="a91eaf53-babd-4f77-8a53-f2c7e2bb9728"/>
+            <column name="F_PRICE" value="106430"/>
+            <column name="F_DESCRIPTION" value=" частота процессора: 1710 МГц; частота памяти: 14140МГц; объём видеопамяти: 11Гб; тип видеопамяти: GDDR6; поддержка: SLI; DirectX 12/OpenGL 4.5; доп. питание: 8+8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+         <insert tableName="T_ITEM">
+            <column name="F_NAME" value="POWERCOLOR AMD Radeon VII"/>
+            <column name="F_UNIQUE" value="991ded6d-796d-4ccf-87cc-43618d6b792d"/>
+            <column name="F_PRICE" value="53890"/>
+            <column name="F_DESCRIPTION" value="частота процессора: 1400 МГц (1750 МГц, в режиме Boost); частота памяти: 1000МГц; объём видеопамяти: 16Гб; тип видеопамяти: HBM2; DirectX 12/OpenGL 4.5; доп. питание: 8+8 pin;"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

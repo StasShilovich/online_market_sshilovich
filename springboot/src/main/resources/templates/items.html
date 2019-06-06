@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"></div>
+    <title>Users</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="tab-container">
+    <table class="table-bordered">
+        <thead>
+        <tr>
+            <th scope="col"><i> # </i></th>
+            <th scope="col"><i> Name </i></th>
+            <th scope="col"><i> Unique </i></th>
+            <th scope="col"><i> Price </i></th>
+            <th scope="col"><i> Link </i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="items,stat:${pageDTO.list}">
+            <td th:text="${stat.count}+(${page}-1)*${scale}"></td>
+            <td th:text="${items.name}"></td>
+            <td th:text="${items.unique}"></td>
+            <td th:text="${items.price}"></td>
+            <td><b><i><a href="#" th:text="Info" th:href="@{/private/items/{id}(id=${items.id})}"></a></i></b>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="col-md-8" th:if="${pageDTO.countOfPages>0}">
+        <nav aria-label="Pagination">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" th:each="number:${#numbers.sequence(1,pageDTO.countOfPages)}">
+                    <a class="page-link" th:href="@{/private/items(page=${number})}"
+                       th:text="${number}"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

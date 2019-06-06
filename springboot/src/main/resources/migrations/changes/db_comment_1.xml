@@ -4,15 +4,16 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
-    <changeSet id="ITEM_TABLE_1" author="stas.shilovich@gmail.com">
-        <createTable tableName="T_ITEM">
+    <changeSet id="COMMENT_TABLE_1" author="stas.shilovich@gmail.com">
+        <createTable tableName="T_COMMENT">
             <column autoIncrement="true" name="F_ID" type="BIGINT">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="F_NAME" type="VARCHAR(50)"/>
-            <column name="F_UNIQUE" type="VARCHAR(40)"/>
-            <column name="F_PRICE" type="DECIMAL(8,2)"/>
-            <column name="F_DESCRIPTION" type="VARCHAR(200)"/>
+            <column name="F_DATE" type="DATE"/>
+            <column name="F_CONTENT" type="VARCHAR(200)"/>
+            <column name="F_USER_ID" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="FK_USER_COMMENT" references="T_USER(F_ID)"/>
+            </column>
             <column name="F_DELETED" type="BOOLEAN"/>
         </createTable>
     </changeSet>

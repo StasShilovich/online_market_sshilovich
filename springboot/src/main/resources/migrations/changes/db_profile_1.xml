@@ -4,16 +4,14 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
-    <changeSet id="ITEM_TABLE_1" author="stas.shilovich@gmail.com">
-        <createTable tableName="T_ITEM">
+    <changeSet id="PROFILE_TABLE_1" author="stas.shilovich@gmail.com">
+        <createTable tableName="T_PROFILE">
             <column autoIncrement="true" name="F_ID" type="BIGINT">
-                <constraints primaryKey="true"/>
+                <constraints nullable="false" foreignKeyName="FK_USER_PROFILE" references="T_USER(F_ID)"
+                             primaryKey="true"/>
             </column>
-            <column name="F_NAME" type="VARCHAR(50)"/>
-            <column name="F_UNIQUE" type="VARCHAR(40)"/>
-            <column name="F_PRICE" type="DECIMAL(8,2)"/>
-            <column name="F_DESCRIPTION" type="VARCHAR(200)"/>
-            <column name="F_DELETED" type="BOOLEAN"/>
+            <column name="F_ADDRESS" type="VARCHAR(50)"/>
+            <column name="F_PHONE_NUMBER" type="VARCHAR(500)"/>
         </createTable>
     </changeSet>
 

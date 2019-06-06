@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <include file="/migrations/changes/db_user_1.xml"/>
+    <include file="/migrations/changes/db_user_insert_1.xml"/>
+    <include file="/migrations/changes/db_user_insert_2.xml"/>
+    <include file="/migrations/changes/db_user_insert_3.xml"/>
+    <include file="/migrations/changes/db_role_1.xml"/>
+    <include file="/migrations/changes/db_role_insert_1.xml"/>
+    <include file="/migrations/changes/db_item_1.xml"/>
+    <include file="/migrations/changes/db_article_1.xml"/>
+    <include file="/migrations/changes/db_comment_1.xml"/>
+    <include file="/migrations/changes/db_feedback_1.xml"/>
+    <include file="/migrations/changes/db_profile_1.xml"/>
+    <include file="/migrations/changes/db_item_insert_1.xml"/>
+
+</databaseChangeLog>

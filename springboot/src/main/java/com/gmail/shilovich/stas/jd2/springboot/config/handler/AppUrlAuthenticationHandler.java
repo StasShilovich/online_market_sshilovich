@@ -18,7 +18,7 @@ import java.util.Collection;
 
 public class AppUrlAuthenticationHandler implements AuthenticationSuccessHandler {
 
-    private static Logger logger = LoggerFactory.getLogger(WebAccessDeniedHandler.class);
+    private static Logger logger = LoggerFactory.getLogger(AppUrlAuthenticationHandler.class);
 
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
