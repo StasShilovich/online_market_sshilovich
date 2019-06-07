@@ -32,7 +32,7 @@ public class ApiSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .antMatcher("/api/v1/private/items/**")
                 .authorizeRequests()
                 .anyRequest()
-                .hasAuthority("SECURE_API_USER")
+                .hasAnyAuthority("SECURE_API_USER")
                 .and()
                 .httpBasic()
                 .and()
