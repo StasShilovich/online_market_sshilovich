@@ -1,0 +1,91 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="INSERT_COMMENT_1" author="stas.shilovich@gmail.com">
+        <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-01-12"/>
+            <column name="F_CONTENT" value="Good"/>
+            <column name="F_ARTICLE_ID" value="2"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-03-10"/>
+            <column name="F_CONTENT" value="Very Good"/>
+            <column name="F_ARTICLE_ID" value="2"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-03-12"/>
+            <column name="F_CONTENT" value="Great"/>
+            <column name="F_ARTICLE_ID" value="2"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2018-03-12"/>
+            <column name="F_CONTENT" value="Excellent"/>
+            <column name="F_ARTICLE_ID" value="1"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2017-03-12"/>
+            <column name="F_CONTENT" value="Significant"/>
+            <column name="F_ARTICLE_ID" value="1"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2016-03-12"/>
+            <column name="F_CONTENT" value="Very Very Good"/>
+            <column name="F_ARTICLE_ID" value="1"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2018-09-22"/>
+            <column name="F_CONTENT" value="Good"/>
+            <column name="F_ARTICLE_ID" value="3"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2018-11-12"/>
+            <column name="F_CONTENT" value="God"/>
+            <column name="F_ARTICLE_ID" value="4"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-01-27"/>
+            <column name="F_CONTENT" value="Gooooood"/>
+            <column name="F_ARTICLE_ID" value="6"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-05-08"/>
+            <column name="F_CONTENT" value="Text"/>
+            <column name="F_ARTICLE_ID" value="8"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-04-14"/>
+            <column name="F_CONTENT" value="Text1"/>
+            <column name="F_ARTICLE_ID" value="9"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-01-15"/>
+            <column name="F_CONTENT" value="Text3"/>
+            <column name="F_ARTICLE_ID" value="12"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-02-17"/>
+            <column name="F_CONTENT" value="Text4"/>
+            <column name="F_ARTICLE_ID" value="13"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-03-22"/>
+            <column name="F_CONTENT" value="Text5"/>
+            <column name="F_ARTICLE_ID" value="4"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-01-23"/>
+            <column name="F_CONTENT" value="Text6"/>
+            <column name="F_ARTICLE_ID" value="6"/>
+        </insert>
+         <insert tableName="T_COMMENT">
+            <column name="F_DATE" value="2019-02-24"/>
+            <column name="F_CONTENT" value="Text7"/>
+            <column name="F_ARTICLE_ID" value="12"/>
+        </insert>
+
+
+    </changeSet>
+</databaseChangeLog>

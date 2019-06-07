@@ -7,7 +7,6 @@ import java.util.List;
 
 
 public interface ItemService {
-    PageDTO<ItemDTO> getPage(int countOfPAge);
 
     ItemDTO getItem(Long id);
 
@@ -16,4 +15,6 @@ public interface ItemService {
     void addItem(ItemDTO itemDTO);
 
     void deleteItem(Long id);
+
+    PageDTO<ItemDTO> getPage(int page);
 }

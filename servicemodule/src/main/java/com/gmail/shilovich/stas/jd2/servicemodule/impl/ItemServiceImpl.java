@@ -10,8 +10,9 @@ import com.gmail.shilovich.stas.jd2.servicemodule.model.PageDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
@@ -32,6 +33,7 @@ public class ItemServiceImpl implements ItemService, GenericPageService<ItemDTO>
         this.itemConverter = itemConverter;
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     @Transactional
     public PageDTO<ItemDTO> getPage(int page) {
@@ -39,9 +41,7 @@ public class ItemServiceImpl implements ItemService, GenericPageService<ItemDTO>
         int countOfItems = getCountOfItems();
         int offset = (page - 1) * OBJECTS_ON_PAGE;
         int limit = OBJECTS_ON_PAGE;
-        logger.info("offset=" + offset + "  limit=" + limit);
         pageDTO.setList(getItems(offset, limit));
-        logger.info(pageDTO.getList().size() + " -size");
         int countOfPages = new BigDecimal((double) countOfItems / OBJECTS_ON_PAGE).setScale(0, RoundingMode.UP).intValue();
         pageDTO.setCountOfPages(countOfPages);
         return pageDTO;

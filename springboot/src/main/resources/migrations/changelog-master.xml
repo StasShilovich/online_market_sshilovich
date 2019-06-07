@@ -16,5 +16,7 @@
     <include file="/migrations/changes/db_feedback_1.xml"/>
     <include file="/migrations/changes/db_profile_1.xml"/>
     <include file="/migrations/changes/db_item_insert_1.xml"/>
+    <include file="/migrations/changes/db_article_insert_1.xml"/>
+    <include file="/migrations/changes/db_comment_insert_1.xml"/>
 
 </databaseChangeLog>

@@ -6,6 +6,7 @@ import com.gmail.shilovich.stas.jd2.servicemodule.model.PageDTO;
 import com.gmail.shilovich.stas.jd2.springboot.exception.ControllerException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ public class ItemController {
 
     private final ItemService itemService;
 
+    @Autowired
     public ItemController(ItemService itemService) {
         this.itemService = itemService;
     }

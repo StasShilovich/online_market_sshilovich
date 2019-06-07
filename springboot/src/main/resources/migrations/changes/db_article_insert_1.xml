@@ -1,0 +1,145 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="INSERT_ARTICLE_1" author="stas.shilovich@gmail.com">
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2012-11-12"/>
+            <column name="F_TITLE" value="Roles of Sensitive Men"/>
+            <column name="F_AUTHOR_INFO" value="Gerald Thompson"/>
+            <column name="F_CONTENT"
+                    value="The article “Roles of Sensitive Men” by Gerald Thompson that appeared in the magazine The Watcher can be said to be an extended argument with gaping holes. Thompson presents sensitive men as the new gatekeepers of the future, the ones that will lead the most influential companies and make the greatest mark in the field of humanities. Thompson makes it all sound like a new race of human beings will descend on our lonely planet. While the author has some insight, much of the article is based on bias and speculation rather than actual research."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2013-02-12"/>
+            <column name="F_TITLE" value="Customer Satisfaction Still at 1970s Levels"/>
+            <column name="F_AUTHOR_INFO" value="Chad Brooks"/>
+            <column name="F_CONTENT"
+                    value="The article draws attention to the problem of relationships between American companies and their customers; in particular, the author refers to the issues of clients not being completely satisfied by customer support services of these companies. The article is rather expository than analytical or descriptive, and mostly uses data from external sources and research, which shows the level of customers’ satisfaction with the mentioned services today remains rather low—on the levels of the 1970s. The article, however, does not seem to have any significant background, which could be, for example, a rapid decline of brands’ popularity, or the mass bankruptcy of companies; at least nothing like that is mentioned in the text."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2013-06-05"/>
+            <column name="F_TITLE" value="Review of “The Role of God” by George Hammond"/>
+            <column name="F_AUTHOR_INFO" value="George Hammond"/>
+            <column name="F_CONTENT"
+                    value="“The Role of God” by George Hammond, published in the opinion magazine Grass Over Grass, is ambitious in that its primary focus is a being that is perceived to be infinite. Hammond directs attention initially to the fact that God cannot be seen, in its pure form, thus cancelling out a specific role for it since we cannot get physically acquainted with its presence. The author continues his argumentation by stating that, “The roleless God has a role in our lives. It moves us to think deeply about nothingness, mystery, and what we simply cannot explain” (Hammond 56). "/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2012-05-04"/>
+            <column name="F_TITLE" value="Felons Should Not Be Allowed to Vote"/>
+            <column name="F_AUTHOR_INFO" value="Stuart A. Kallen"/>
+            <column name="F_CONTENT"
+                    value="The article Felons Should Not Be Allowed to Vote argues that former felons should not have their voting rights restored once they regain their freedom. The author believes felons need to be deprived of their voting rights for life as a symbolic price they have to pay for violating certain social and legal norms. The article is structured in an unusual and, in my opinion, an effective manner. It first presents the arguments of those supporting the idea of re-enfranchising felons, and then provides the author’s reasons not to agree with the idea."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2012-04-18"/>
+            <column name="F_TITLE" value="The Impact of Technology on Politics"/>
+            <column name="F_AUTHOR_INFO" value="Sharon Housley"/>
+            <column name="F_CONTENT"
+                    value="The continued growth of technology has had a significant impact on the political ratings that candidates achieve. The article Impact of Technology on Politics attempts to analyze how these two spheres of modern life, technology and politics, interrelate and what the outcomes are of this interrelationship. Political candidates use technology in many ways. Different communication channels provided by the Internet have the power to influence the growth of different individuals in their respective spheres. The likes of Twitter, Facebook, and YouTube are powerful communication media platforms that can easily raise the ratings of political candidates. Housley claims that whether we acknowledge it or not, technology is a deciding factor in most political races. Through technology, politicians are able to access funds, gain political pundits, and spend less on campaigning and pushing their candidacy."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2012-04-09"/>
+            <column name="F_TITLE"
+                    value="The Living Conditions of U.S.-Born Children of Mexican Immigrants in Unmarried Families"/>
+            <column name="F_AUTHOR_INFO" value="Y. C. Padilla"/>
+            <column name="F_CONTENT"
+                    value="In the United States of America, there are various hardships faced by immigrant children. These hardships may vary depending on the origin of the immigrants. The current paper is aimed at analyzing an article, “The Living Conditions of U.S.-Born Children of Mexican Immigrants in Unmarried Families,” published in the “Hispanic Journal of Behavioral Sciences.” The studies presented in the article demonstrate that the children of immigrants of Mexican origin are prone to high risks of a socioeconomic nature within US society. The paper concentrates on the children of immigrants of Mexican origin, and more specifically, those that live in unmarried families. Mexican immigrants, in most cases, have considerably lower levels of employment, or are unemployed, as well as their education level is minimal."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-03-01"/>
+            <column name="F_TITLE" value="My Favorite Place"/>
+            <column name="F_AUTHOR_INFO" value="Damon Tran"/>
+            <column name="F_CONTENT"
+                    value="Richmond Beach was my spiritual hangout in my childhood. It is a rocky beach in the city of Richmond Beach, which can be accessed by a long downhill drive (by car or bicycle) from the city of Edmonds. Or, as I did often, took the 30-minute walk from my house to the calm waters through a tranquil stroll through the woods of Woodway. It used to be a place inhabited by Native Americans, but now it is occupied by mostly Caucasian people. However, a totem pole stands in tribute to the tribes that used to call the beach home. It has a vast property, with a beach, a playground, two upper lawns for the view and recreation, myriad “secret” trails along the clay hillsides, picnic areas, and a square where people can walk around, take an outdoor rinse-shower after a swim, and benches for the spectacular view."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-04-25"/>
+            <column name="F_TITLE" value="Ideal Social Moral Code"/>
+            <column name="F_AUTHOR_INFO" value="Jermaine Mcgee"/>
+            <column name="F_CONTENT"
+                    value="Upon reflection of the ideal social moral code, within one sentence, it would be: be constructive, not destructive. We have many holy books, manuals on living, and self-help tomes. However, I feel this is the most exacting moral code in terms of a social context. By social context, I mean how we interact with others and behave in social situations. Though “be constructive, not destructive” sounds sensible, there are many nuances. Sometimes it is difficult to determine if an act is exactly constructive or destructive. In the following paragraphs, these nuances will be discussed in detail."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2018-03-20"/>
+            <column name="F_TITLE" value="Beyond Identity"/>
+            <column name="F_AUTHOR_INFO" value="Reginald Goodman"/>
+            <column name="F_CONTENT"
+                    value="We often think of ourselves as our body, mind, and emotions. We take these three elements and make an amalgamation. However, we also often talk about a person’s soul. Is there any scientific basis for the soul? Surprisingly, there is. Each unique personality a person has (even in circumstances of amnesia and other illnesses), the feeling and identity of the self beyond age (especially experienced as we grow older), and our inevitable subjective experience as an individual comprise a scientific foundation for the soul. Despite neuroplasticity, or the  constant shift in the links between our brain cells, we remain essentially the same personality. This consistency is most stark in the case of mentally ill patients or people who have experienced memory loss."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-05-15"/>
+            <column name="F_TITLE" value="How the Harry Potter Series Became So Popular"/>
+            <column name="F_AUTHOR_INFO" value="Jeanette Dean"/>
+            <column name="F_CONTENT"
+                    value="The Harry Potter series, written by J.K. Rowling, is perhaps the most popular set of novels of the modern era. With seven books and many blockbuster films to its name, the series has amassed about 15 billion dollars in sales. How did this phenomenon become what it is? For those scratching their heads, the reason can be broken down into several areas: Rowling garnered a generous initial contract for her book, separate book covers were created for both teens and adults, midnight releases/promotions/pre-orders made the public more fanatic about the series, and fan blogs were rampant. In fact, these are just a few of the main reasons why the Harry Potter took off the way it did."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-02-12"/>
+            <column name="F_TITLE" value="How to Get Rid of Stretch Marks"/>
+            <column name="F_AUTHOR_INFO" value="Estelle	Graves"/>
+            <column name="F_CONTENT"
+                    value="Having stretch marks can lower the self esteem of people. It is often seen as something ugly, or at least unaesthetic. That is why countless people type in “how to get rid of stretch marks” in internet search engines to discover how to solve this issue. In this essay, we will focus on practical ways of making stretch marks disappear by various methods: consuming more Vitamin A, using a sugar scrub, employing aloe vera, taking hyaluronic acid through capsules, and applying coconut oil. Getting stretch marks out by consuming vitamin A seems like a stretch, but it is a home remedy that is trusted. In fact, a lot of issues we have can be solved by the intake of more vitamins. According to Healthline, “Vitamin A is referred to as a retinoid. Retinoids make skin appear smoother and more youthful. They’re used in many over-the-counter topical cosmetic creams. "/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-01-11"/>
+            <column name="F_TITLE" value="How to Cook Rice"/>
+            <column name="F_AUTHOR_INFO" value="Austin Soto"/>
+            <column name="F_CONTENT"
+                    value="Cooking rice does not seem that complicated. However, there are so many different ways to prepare it. Gordon Ramsay is one of the most famous chefs in the world. He makes videos on how to prepare relatively simple dishes, such as rice. His method of cooking is as follows: 1) Get 400 grams of rice (preferably basmati). 2) Use cold water to rinse the dust and starch from the rice. 3) Place the rice in a pan. Add some cardamom pods (broken open), star anise, salt, and pepper. 4) Add one and a half part cold water. 5) Get the lid on, bring to a boil, then turn the heat down to let it steam for about 8-10 minutes. 6) Keep the lid on throughout the steaming process. 7) Get the cardamom pods and star anise out, and use a fork to separate the rice a bit by running the fork through the rice a few times. 8) The rice is ready to be served (Shukla, Pragati). This recipe makes for a fragrant and downright delicious basmati rice dish. Serving curry on top of this rice adds to its tastiness."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-04-24"/>
+            <column name="F_TITLE" value="How to Start a Business"/>
+            <column name="F_AUTHOR_INFO" value="Gadfly Talon"/>
+            <column name="F_CONTENT"
+                    value="In this age of capitalism, starting a business sounds like a great thing to do. However, many people do not know where to start. In fact, “how to start a business” is one of the most searched-for queries on the internet for a reason. It is a daunting act. You have to sacrifice your time, money, and energy for an idea that might not come to fruition. That is why it is good to know a process you can follow to ensure success. In the following paragraphs, a step by step guide on how to start a business will be given. The first step in starting a business is doing research. You have to investigate your business idea, explore the market for your concept, look into your competition, and more. According to The Balance, there are a few questions you should ask during the research process: “Is there a need for your anticipated products/services? Who needs it? Are there other companies offering similar products/services now?"/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-05-10"/>
+            <column name="F_TITLE" value="When Was Jesus Born?"/>
+            <column name="F_AUTHOR_INFO" value="Angel Christensen"/>
+            <column name="F_CONTENT"
+                    value="Jesus Christ is one of the most popular figures of history and religion. Though the historical evidence of him living is not so substantial, there is enough data to claim he was a real person. However, with his existence assured by information outside the Bible, there are still many mysteries about him. One such conundrum is when he was born. In fact, “when was Jesus born” is a top search on the internet. There are many theories about when he was born in terms of the year and month, and even day. These theories have been clouded by popular myths, cultural norms, and a lack of concrete evidence. However, this essay will delve into the various theories behind his birthdate and try to get to the bottom of the question."/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="T_ARTICLE">
+            <column name="F_DATE" value="2019-10-11"/>
+            <column name="F_TITLE" value="Canada: The Beginning"/>
+            <column name="F_AUTHOR_INFO" value="Hope Goodwin"/>
+            <column name="F_CONTENT"
+                    value="Canada is a revered country in the North American continent for its friendly people, peaceful politics, spectacular wildlife, and much more. However, for people who live outside this country (second largest in terms of area), the history of this nation may not be known or understood. In order to understand how Canada became the country it is now, an overview will be given. Canada has gone through a long history before its Constitution was patriated in 1982. In fact, it begins with the pre-contact aboriginal timeline. According to Britannica.com, “North America’s first humans migrated from Asia, presumably over a now-submerged land bridge from Siberia to Alaska sometime about 12,000 years ago, during the last Ice Age; it has also been argued, however, that some people arrived earlier, possibly up to 60,000 years ago. "/>
+            <column name="F_DELETED" valueBoolean="false"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
