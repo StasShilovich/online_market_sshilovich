@@ -14,12 +14,13 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 
 @Configuration
 public class ApiSecurityConfigurer extends WebSecurityConfigurerAdapter {
-    private  UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
     @Autowired
     public ApiSecurityConfigurer(UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bsEncoder());
@@ -28,8 +29,7 @@ public class ApiSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .antMatcher("/api/v1/private/users/**")
-                .antMatcher("/api/v1/private/articles/**")
+                .antMatcher("/api/v1/private/items/**")
                 .authorizeRequests()
                 .anyRequest()
                 .hasAuthority("SECURE_API_USER")

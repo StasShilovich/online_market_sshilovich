@@ -59,6 +59,7 @@ public class AppUrlAuthenticationHandler implements AuthenticationSuccessHandler
     private String determineTargetUrl(Authentication authentication) {
         boolean isCustomerUser = false;
         boolean isAdministrator = false;
+        boolean isSaleUser = false;
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
         for (GrantedAuthority grantedAuthority : authorities) {
             switch (grantedAuthority.getAuthority()) {
@@ -66,6 +67,9 @@ public class AppUrlAuthenticationHandler implements AuthenticationSuccessHandler
                     isAdministrator = true;
                     break;
                 case "CUSTOMER_USER":
+                    isCustomerUser = true;
+                    break;
+                case "SALE_USER":
                     isCustomerUser = true;
                     break;
             }
@@ -76,6 +80,9 @@ public class AppUrlAuthenticationHandler implements AuthenticationSuccessHandler
         } else if (isAdministrator) {
             logger.info("Role ADMINISTRATOR. Redirect on users");
             return "/private/users";
+        } else if (isSaleUser) {
+            logger.info("Role SALE_USER. Redirect on items");
+            return "/private/items";
         } else {
             throw new IllegalStateException();
         }
