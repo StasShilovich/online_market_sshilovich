@@ -1,14 +1,43 @@
 package com.gmail.shilovich.stas.jd2.repositorymodule.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OrderBy;
+import javax.persistence.Table;
+import java.util.List;
+import java.util.Objects;
+
+@Entity
+@Table(name = "t_user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "F_ID", updatable = false, nullable = false)
     private long id;
+    @Column(name = "F_EMAIL")
+    @OrderBy(value = "email DESC")
     private String email;
+    @Column(name = "F_PASSWORD")
     private String password;
+    @Column(name = "F_NAME")
     private String name;
+    @Column(name = "F_SURNAME")
     private String surname;
+    @Column(name = "F_PATRONYMIC")
     private String patronymic;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "F_ROLE_ID")
     private Role role;
+    @Column(name = "F_DELETED")
     private boolean isDeleted;
+//    private List<Comment> commentList;
+
 
     public long getId() {
         return id;
@@ -72,5 +101,25 @@ public class User {
 
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                isDeleted == user.isDeleted &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(surname, user.surname) &&
+                Objects.equals(patronymic, user.patronymic) &&
+                Objects.equals(role, user.role);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, email, password, name, surname, patronymic, role, isDeleted);
     }
 }

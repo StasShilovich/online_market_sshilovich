@@ -10,13 +10,13 @@ import java.util.Set;
 
 public class AppUserPrincipal implements UserDetails {
 
-    private UserDTO userDTO;
+    private LoginDTO loginDTO;
     private Set<GrantedAuthority> grantedAuthorities;
 
-    public AppUserPrincipal(UserDTO userDTO) {
-        this.userDTO = userDTO;
-        this.grantedAuthorities = new HashSet<>();
-        grantedAuthorities.add(new SimpleGrantedAuthority(userDTO.getRole()));
+    public AppUserPrincipal(LoginDTO loginDTO) {
+        this.loginDTO = loginDTO;
+        this.grantedAuthorities =  new HashSet<>();
+        grantedAuthorities.add(new SimpleGrantedAuthority(loginDTO.getRole()));
     }
 
     @Override
@@ -26,12 +26,12 @@ public class AppUserPrincipal implements UserDetails {
 
     @Override
     public String getPassword() {
-        return userDTO.getPassword();
+        return loginDTO.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return userDTO.getEmail();
+        return loginDTO.getEmail();
     }
 
     @Override

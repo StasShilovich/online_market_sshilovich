@@ -11,6 +11,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.sql.DataSource;
 import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -24,24 +26,11 @@ public class GenericRepositoryImpl<I, T> implements GenericRepository<I, T> {
     @PersistenceContext
     protected EntityManager entityManager;
 
-    @Autowired
-    private DataSource dataSource;
-
     @SuppressWarnings("unchecked")
     public GenericRepositoryImpl() {
         ParameterizedType genericSuperclass = (ParameterizedType) getClass()
                 .getGenericSuperclass();
         this.entityClass = (Class<T>) genericSuperclass.getActualTypeArguments()[1];
-    }
-
-    @Override
-    public Connection getConnection() {
-        try {
-            return dataSource.getConnection();
-        } catch (SQLException e) {
-            logger.error(e.getMessage(), e);
-            throw new DatabaseException("Some troubles with getting connection", e);
-        }
     }
 
     @Override
@@ -65,7 +54,7 @@ public class GenericRepositoryImpl<I, T> implements GenericRepository<I, T> {
     }
 
     @Override
-    public List<T> findAll(int offset,int limit) {
+    public List<T> findAll(int offset, int limit) {
         String query = "from " + entityClass.getName() + " c";
         Query q = entityManager.createQuery(query)
                 .setFirstResult(offset)
@@ -79,4 +68,5 @@ public class GenericRepositoryImpl<I, T> implements GenericRepository<I, T> {
         Query q = entityManager.createQuery(query);
         return ((Number) q.getSingleResult()).intValue();
     }
+
 }

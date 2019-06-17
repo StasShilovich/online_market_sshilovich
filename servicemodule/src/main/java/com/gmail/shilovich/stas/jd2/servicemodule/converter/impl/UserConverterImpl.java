@@ -3,6 +3,7 @@ package com.gmail.shilovich.stas.jd2.servicemodule.converter.impl;
 import com.gmail.shilovich.stas.jd2.repositorymodule.model.Role;
 import com.gmail.shilovich.stas.jd2.repositorymodule.model.User;
 import com.gmail.shilovich.stas.jd2.servicemodule.converter.UserConverter;
+import com.gmail.shilovich.stas.jd2.servicemodule.model.LoginDTO;
 import com.gmail.shilovich.stas.jd2.servicemodule.model.UserDTO;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -37,5 +38,15 @@ public class UserConverterImpl implements UserConverter {
         user.setRole(role);
         user.setDeleted(userDTO.isDeleted());
         return user;
+    }
+
+    @Override
+    public LoginDTO toLoginDTO(User user) {
+        LoginDTO loginDTO = new LoginDTO();
+        loginDTO.setId(user.getId());
+        loginDTO.setEmail(user.getEmail());
+        loginDTO.setPassword(user.getPassword());
+        loginDTO.setRole(user.getRole().getName());
+        return loginDTO;
     }
 }

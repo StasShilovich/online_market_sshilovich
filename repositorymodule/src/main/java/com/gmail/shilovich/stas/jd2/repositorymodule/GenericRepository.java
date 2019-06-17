@@ -5,8 +5,6 @@ import java.util.List;
 
 public interface GenericRepository<I, T> {
 
-    Connection getConnection();
-
     void persist(T entity);
 
     void merge(T entity);
@@ -16,7 +14,7 @@ public interface GenericRepository<I, T> {
     T findById(I id);
 
     @SuppressWarnings({"unchecked", "rawtypes"})
-    List<T> findAll(int offset,int limit);
+    List<T> findAll(int offset, int limit);
 
     int getCountOfEntities();
 

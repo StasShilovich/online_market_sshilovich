@@ -7,5 +7,5 @@ import java.util.List;
 public interface UserService {
     List<UserDTO> getUsers();
 
-    void changeRole(Long id, String role);
+    void changeRole(Long id, String name);
 }

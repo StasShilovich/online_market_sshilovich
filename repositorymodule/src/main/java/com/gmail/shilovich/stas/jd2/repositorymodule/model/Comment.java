@@ -15,6 +15,7 @@ public class Comment {
     private Date date;
     @Column(name = "F_CONTENT")
     private String content;
+//    private User user;
 
     public Long getId() {
         return id;
