@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.gmail.shilovich.stas.jd2.servicemodule.constant.ServiceModuleConstant.OBJECTS_ON_PAGE;
+
 @Controller
 @RequestMapping("/private")
 public class UserController {
@@ -21,9 +23,14 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public String getUser(Model model) {
+    public String getUser(
+            Model model,
+            @RequestParam(name = "page", defaultValue = "1") int page
+    ) {
         List<UserDTO> users = userService.getUsers();
         model.addAttribute("users", users);
+        model.addAttribute("page", page);
+        model.addAttribute("scale", OBJECTS_ON_PAGE);
         return "/users";
     }
 

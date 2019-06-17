@@ -10,15 +10,19 @@
     <table class="table-bordered">
         <thead>
         <tr>
+            <th scope="col"><i> # </i></th>
             <th scope="col"><i> Surname </i></th>
             <th scope="col"><i> Name </i></th>
             <th scope="col"><i> Patronymic </i></th>
             <th scope="col"><i> Email </i></th>
             <th scope="col"><i> Role </i></th>
+            <th scope="col"><i> Change Role </i></th>
+            <th scope="col"><i> Deleted </i></th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user:${users}">
+        <tr th:each="user,stat:${users}">
+            <td th:text="${stat.count}+(${page}-1)*${scale}"></td>
             <td th:text="${user.surname}"></td>
             <td th:text="${user.name}"></td>
             <td th:text="${user.patronymic}"></td>
@@ -38,9 +42,11 @@
                     <button type="submit" class="btn btn-info">Change_role</button>
                 </form>
             </td>
+            <td th:text="${user.isDeleted}"></td>
         </tr>
         </tbody>
     </table>
+    <div th:replace="fragments/footer::footer"></div>
 </div>
 </body>
 </html>

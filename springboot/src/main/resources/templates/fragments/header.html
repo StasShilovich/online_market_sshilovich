@@ -13,17 +13,18 @@
         <nav>
             <ul>
                 <li sec:authorize="authenticated" class="breadcrumb-item">
-                    <a href="#" h:href="@{/private/login}">LOGIN</a></li>
+                    <a href="#" th:href="@{/private/login}">LOGIN</a>
+                </li>
                 <li sec:authorize="hasAuthority('ADMINISTRATOR')" class="breadcrumb-item">
                     <a href="#" th:href="@{/private/users}">USERS</a>
                 </li>
                 <li sec:authorize="hasAuthority('SALE_USER')" class="breadcrumb-item">
                     <a href="#" th:href="@{/private/items}">ITEMS</a></li>
-                <li sec:authorize="hasAuthority('CUSTOMER_USER')" class="breadcrumb-item">
-                    <a href="#" th:href="@{/private/items}">ITEMS</a></li>
                 <li sec:authorize="hasAuthority('SALE_USER')" class="breadcrumb-item">
                     <a href="#" th:href="@{/private/articles}">ARTICLES</a>
                 </li>
+                <li sec:authorize="hasAuthority('CUSTOMER_USER')" class="breadcrumb-item">
+                    <a href="#" th:href="@{/private/items}">ITEMS</a></li>
                 <li sec:authorize="hasAuthority('CUSTOMER_USER')" class="breadcrumb-item">
                     <a href="#" th:href="@{/private/articles}">ARTICLES</a>
                 </li>
