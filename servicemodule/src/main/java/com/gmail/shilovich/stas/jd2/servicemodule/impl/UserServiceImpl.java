@@ -47,6 +47,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         List<UserDTO> userDTOS = users.stream()
                 .map(userConverter::toDTO)
                 .collect(Collectors.toList());
+        for (UserDTO userDTO : userDTOS) {
+            logger.info(userDTO.toString());
+        }
         return userDTOS;
     }
 
@@ -55,6 +58,13 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public void changeRole(Long id, String name) {
         Role role = roleRepository.findRoleByName(name);
         userRepository.changeRole(id, role);
+    }
+
+    @Override
+    @Transactional
+    public void addUser(UserDTO userDTO) {
+        User user = userConverter.fromDTO(userDTO);
+        userRepository.persist(user);
     }
 
     @Override

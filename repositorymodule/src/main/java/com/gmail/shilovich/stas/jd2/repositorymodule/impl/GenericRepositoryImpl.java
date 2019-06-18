@@ -63,6 +63,13 @@ public class GenericRepositoryImpl<I, T> implements GenericRepository<I, T> {
     }
 
     @Override
+    public List<T> findAllEntites() {
+        String query = "from " + entityClass.getName() ;
+        Query q = entityManager.createQuery(query);
+        return q.getResultList();
+    }
+
+    @Override
     public int getCountOfEntities() {
         String query = "SELECT COUNT(*) FROM " + entityClass.getName() + " c";
         Query q = entityManager.createQuery(query);

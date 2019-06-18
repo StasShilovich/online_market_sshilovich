@@ -8,4 +8,6 @@ public interface UserService {
     List<UserDTO> getUsers();
 
     void changeRole(Long id, String name);
+
+    void addUser(UserDTO userDTO);
 }

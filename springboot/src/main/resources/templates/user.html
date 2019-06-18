@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"></div>
+    <title>Add user</title>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="tab-container">
+    <form action="#" th:action="@{/private/users/add/}" th:object="${user}" method="post">
+        <table>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" th:text="*{surname}" maxlength="40" placeholder="Surname"/></td>
+<!--                <td th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname Error</td>-->
+            </tr>
+<!--            <tr>-->
+<!--                <td>Name:</td>-->
+<!--                <td><input type="text" th:field="*{name}" maxlength="20" placeholder="Name"/></td>-->
+<!--                &lt;!&ndash;                <td th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname Error</td>&ndash;&gt;-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>Patronymic:</td>-->
+<!--                <td><input type="text" th:field="*{patronymic}" maxlength="40" placeholder="Patronymic"/></td>-->
+<!--                &lt;!&ndash;                <td th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname Error</td>&ndash;&gt;-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>Email:</td>-->
+<!--                <td><input type="text" th:field="*{email}" maxlength="50" placeholder="Email"/></td>-->
+<!--                &lt;!&ndash;                <td th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname Error</td>&ndash;&gt;-->
+<!--            </tr>-->
+        </table>
+        <button type="submit" class="btn btn-info">Add User</button>
+    </form>
+</div>
+<div th:replace="fragments/footer::footer"></div>
+</body>
+</html>

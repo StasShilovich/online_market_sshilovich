@@ -29,7 +29,7 @@ public class UserConverterImpl implements UserConverter {
         User user = new User();
         user.setId(userDTO.getId());
         user.setEmail(userDTO.getEmail());
-        user.setPassword(new BCryptPasswordEncoder().encode(userDTO.getPassword()));
+        user.setPassword(new BCryptPasswordEncoder(12).encode(userDTO.getPassword()));
         user.setName(userDTO.getName());
         user.setSurname(userDTO.getSurname());
         user.setPatronymic(userDTO.getPatronymic());
